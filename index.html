@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Film</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <a data-aos="fade-down" href="#" class="logo">Trending Film</a>
+
+        <ul class="navbar">
+            <li><a data-aos="fade-down" href="#chart">Chart</a></li>
+            <li><a data-aos="fade-down" href="#trailer">Trailer</a></li>
+            <li><a data-aos="fade-down" href="#film">Films</a></li>
+        </ul>
+    </header>
+
+    <!-- chart  Section-->
+    <section class="chart" id="chart">
+        <div data-aos="fade-right" class="chart-text">
+            <h1>The Top 10</h1>
+            <h2>Trending Genres</h2>
+            <a href="#film" class="btn">View films</a>
+        </div>
+
+        <div data-aos="fade-left" class="chart-img">
+            <canvas id="myChart">
+                <!-- inject in js -->
+            </canvas>
+        </div>
+    </section>
+
+    <!-- trailer -->
+    <div data-aos="fade-up" class="heading">
+        <h2>Trailer of the Trending Films</h2>
+    </div>
+
+    <section class="trailer" id="trailer">
+        <!-- inject from js -->
+    </section>
+
+    <!-- film -->
+    <section class="film" id="film">
+        <div class="heading" data-aos="fade-down">
+            <h2>Trending Films</h2>
+        </div>
+
+        <div id="film-container" class="film-container">
+            <!-- inject from js -->
+
+            <!-- <div class="box">
+                <div class="box-img">
+                    <img src="https://image.tmdb.org/t/p/w500/tkRDTu9hyWgaBSSzfkYDCZYd1kV.jpg" alt="">
+                </div>
+                <h2>title</h2>
+                <span>release date</span>
+            </div> -->
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        const apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNDgyZjhmN2RkY2JhOTJmNmEyZTY5YWViZmIzYThhYyIsIm5iZiI6MTczMjk3NDk3OS43OTMsInN1YiI6IjY3NGIxOTgzMWU2MWU5MjdkZTE4Y2NlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LNNSoSiBSbdR6mURXoVGgR7iHPPpHwmxPgC5us7Rb5A"
+        const auth = "Bearer "
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: auth + apiKey
+            }
+        };
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
